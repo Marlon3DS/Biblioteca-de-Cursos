@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="catalogoCursos">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Catalogo de Cursos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main" ng-controller="catalogoCursosCtrl">
+        <h2 class="header">Bem vindo ao catalogo de cursos com front em Angular</h2>
+        <div ng-repeat="curso in data.docs" class="card-curso">
+            <img src="{{curso.path + '/logo.png'}}" alt="Logo {{curso.title}}" class="logo-curso">
+            <div class="conteudo-curso">
+                <h4 class="title">
+                    {{curso.title}} - <span class="author">{{curso.author}}</span>
+                </h4>
+                <p class="description">{{curso.description}}</p>
+                <ul ng-repeat="tag in curso.tags" class="tags">
+                    <li><a href="">{{tag}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                Página {{data.page}} de {{data.pages}} | 
+                <a href="" ng-class="{ disable : data.page == 1}" ng-click="previousPage(data.page)">anterior</a> | 
+                <a href="" ng-class="{ disable : data.page == data.pages}" ng-click="nextPage(data.page, data.pages)">próxima</a>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="angular.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#main{
+    width: 80%;
+    margin: 0 10% 0 10%;
+}
+
+.header{
+    padding: 10px;
+    background-color: slategray;
+}
+
+.card-curso{
+    max-width: 350px;
+    min-height: 400px;
+    margin: 5px;
+    background-color: darkgray;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.logo-curso{
+    width: 100%;
+    height: 200px;
+    margin: 0;
+}
+
+.conteudo-curso{
+    margin: 20px;
+}
+
+.tags{
+    list-style: none;
+    display: inline-block;
+}
+
+.tags li{
+    margin: 0;
+}
+
+.tags a{
+    text-decoration: none;
+    color: indigo;
+    padding: 2px;
+}
+
+.tags a:hover{
+    color: #ddd;
+}
+
+.footer{
+    clear: both;
+}
+
+a:active.disable, a:visited.disable, a:link.disable, a:hover.disable{
+    cursor: default;
+    text-decoration: none;
+    color: #ccc;
+}
